@@ -1,6 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家的幸福港湾</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+    
+    <!-- 配置Tailwind自定义颜色和字体 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        warning: '#f59e0b',
+                        danger: '#ef4444',
+                        purple: '#8b5cf6',
+                        pink: '#ec4899',
+                        dark: '#0f172a',
+                        darker: '#030712',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-hover {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .card-hover:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 25px -5px rgba(10, 97, 236, 0.863), 0 8px 10px -6px rgba(10, 97, 236, 0.863);
+            }
+            .bg-grid {
+                background-size: 40px 40px;
+                background-image: 
+                    linear-gradient(to right, rgba(23, 107, 243, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(22, 106, 243, 0.03) 1px, transparent 1px);
+            }
+            .progress-animate {
+                transition: width 0.8s ease-in-out;
+            }
+            .glass-effect {
+                backdrop-filter: blur(12px) saturate(180%);
+                background-color: rgba(70, 236, 223, 0.233);
+                border: 1px solid rgba(238, 16, 208, 0.89);
+            }
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+        }
+    </style>
+</head>
 <head>
     <meta charset="UTF-8">
     <title>导航页</title>
@@ -36,21 +100,84 @@
     <div class='img_div'>
         <img src="../static/z1.jpg">
     </div>
-
-    <div class="zhuti1">
-        <br>
-        <div>👉<a href="http://bd01.bd5k.water-hf.com/a/635363?SHyp" target="_blank" style="font-size: 30px; color: rgb(4, 104, 255);">官方观影通道①</a>👈</div>
-        <br>
-        <div>👉<a href="https://qianwen.alicdn.com/upload/20250306/3ac75cb3d3cf1759c5600279de4ca429/9cc8b2bedd814154964de0b5f958a585/dde40954dcf91903fd26d1481f520599.html?key=15G7dN" target="_blank" style="font-size: 30px; color: rgb(245, 6, 6);">官方观影通道②</a>👈</div>
-        <br>
-        <div>👉<a href="http://jyue.static.pingjiangsj.com/s/15GFHY" target="_blank" style="font-size: 30px; color: rgb(61, 202, 25);">官方观影通道③</a>👈</div>
-        <br>
-        <div>👉<a href="http://eqgf.s.hbbwy.cn/s/15Gl2S" target="_blank" style="font-size: 30px; color: rgb(221, 158, 23);">官方观影通道④</a>👈</div>
-        <div><a style="font-size: 30px; color: rgb(247, 0, 255);">永久网址 vx08.com</a></div>
-        <div><a style="font-size: 30px; color: rgb(3, 3, 3);">如遇通道打不开 请更换通道</a></div>
-        <div><a style="font-size: 30px; color: rgb(5, 5, 5);">请保存本址 永不失联</a></div>
-        <br>
-    </div>
-</body>
-
-</html>
+    <div class="container mx-auto px-4 py-6 max-w-md flex-grow">
+        <!-- 标题区域 -->
+ 
+        </header>
+        
+        <!-- 导航链接区域 - 移除了观影通道⑤ -->
+        <nav class="space-y-3 mb-6">
+            <!-- 观影通道① -->
+            <a href="http://bd01.bd5k.water-hf.com/a/635363?SHyp" class="block glass-effect rounded-xl p-4 card-hover">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center mr-4 icon-container">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold bg-gradient-to-r from-primary to-pink text-gradient">观影通道①</h2>
+                        <p class="text-gray-400 text-xs mt-0.5">点击进入我身体</p>
+                    </div>
+                    <i class="fa fa-chevron-right text-gray-500 text-xs"></i>
+                </div>
+            </a>
+            
+            <!-- 观影通道② -->
+            <a href="https://qianwen.alicdn.com/upload/20250306/3ac75cb3d3cf1759c5600279de4ca429/9cc8b2bedd814154964de0b5f958a585/dde40954dcf91903fd26d1481f520599.html?key=15G7dN" class="block glass-effect rounded-xl p-4 card-hover">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center mr-4 icon-container">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold bg-gradient-to-r from-secondary to-primary text-gradient">观影通道②</h2>
+                        <p class="text-gray-400 text-xs mt-0.5">点击进入我身体</p>
+                    </div>
+                    <i class="fa fa-chevron-right text-gray-500 text-xs"></i>
+                </div>
+            </a>
+            
+            <!-- 观影通道③ -->
+            <a href="http://jyue.static.pingjiangsj.com/s/15GFHY" class="block glass-effect rounded-xl p-4 card-hover">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center mr-4 icon-container">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold bg-gradient-to-r from-warning to-secondary text-gradient">观影通道③</h2>
+                        <p class="text-gray-400 text-xs mt-0.5">点击进入我身体</p>
+                    </div>
+                    <i class="fa fa-chevron-right text-gray-500 text-xs"></i>
+                </div>
+            </a>
+            
+            <!-- 观影通道④ -->
+            <a href="http://eqgf.s.hbbwy.cn/s/15Gl2S" class="block glass-effect rounded-xl p-4 card-hover">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center mr-4 icon-container">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold bg-gradient-to-r from-danger to-warning text-gradient">观影通道④</h2>
+                        <p class="text-gray-400 text-xs mt-0.5">点击进入我身体</p>
+                    </div>
+                    <i class="fa fa-chevron-right text-gray-500 text-xs"></i>
+                </div>
+            </a>
+        <!-- 顶部提示信息 -->
+        <div class="glass-effect rounded-xl p-3 mb-6 text-sm">
+            <p class="flex items-start">
+                <i class="fa fa-info-circle text-primary mt-0.5 mr-2"></i>
+                ①本网站已稳定运营8年，可以放心购买，绝不失联                     
+            </p>
+        </div>
+            <div class="glass-effect rounded-xl p-3 mb-6 text-sm">
+                <p class="flex items-start">
+                    <i class="fa fa-info-circle text-primary mt-0.5 mr-2"></i>                  
+                    ②支付成功后如无法观看,重新进入原通道,点击已购观看
+                </p>
+            </div>
+        <div class="glass-effect rounded-xl p-3 mb-6 text-sm">
+            <p class="flex items-start">
+                <i class="fa fa-info-circle text-primary mt-0.5 mr-2"></i>                  
+                ③通道进不去请更换通道，各别浏览器打不开请更换浏览器
+            </p>
+        </div>
